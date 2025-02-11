@@ -18,7 +18,7 @@ With each challenge, I feel more confident and prepared to take on more complex 
 ### Links
 
 - Solution URL: [GitHub Repository](https://github.com/JDev-8/My-solution-of-Recipe-page-Frontend-Mentor-Challengue)
-- Live Site URL: [Website](https://jdev-8.github.io/My-solution-of-Social-links-profile-Frontend-Mentor-Challengue/)
+- Live Site URL: [Website](https://jdev-8.github.io/My-solution-of-Recipe-page-Frontend-Mentor-Challengue/)
 
 ## My process
 
