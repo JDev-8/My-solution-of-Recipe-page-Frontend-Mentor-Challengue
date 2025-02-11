@@ -1,0 +1,221 @@
+@font-face {
+  font-family: "Young Serif";
+  src: url("../Assets/fonts/young-serif/YoungSerif-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("../Assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
+  font-weight: 400, 600, 700;
+}
+
+/*  Reseteo de estilos y definición de variables */
+:root {
+  --color-principal: #302d2c; /* Color principal para títulos */
+  --color-secundario: #5f574e; /* Color secundario para textos */
+  --color-accento: #964353; /* Color de acento para elementos interactivos */
+  --color-fondo: #f5ede8; /* Color de fondo general */
+  --color-tarjeta: #fff8f9; /* Color de fondo para las tarjetas */
+  --color-borde: #f0e6e1; /* Color para bordes y separadores */
+  --espacio-texto: 1.5rem; /* Espacio entre líneas de texto */
+}
+
+*::before,
+*::after,
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Outfit";
+  font-size: 1rem;
+  background-color: var(--color-fondo);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  min-width: 23.4375rem;
+  max-width: 90rem;
+  margin: 0 auto; /* Simplificado a 0 auto */
+}
+
+.display-none {
+  display: none;
+}
+
+.card {
+  background-color: var(--color-tarjeta);
+}
+
+.recipe-img {
+  width: 100%;
+  height: 15vh;
+  object-fit: cover; /* Hecho a 'cover' para mejor visualización */
+}
+
+.recipe-title {
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 1rem;
+  color: var(--color-principal);
+  font-family: "Young Serif";
+  padding: 0 1rem;
+}
+
+.recipe-text,
+.nutrition-text {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 1rem;
+  color: var(--color-secundario);
+  line-height: var(--espacio-texto);
+  padding: 0 1rem;
+}
+
+.preparation-time {
+  width: 70%;
+  margin: 3.5rem auto; /* Centrado con margin: 0 auto */
+  padding: 1rem;
+  background-color: #fff;
+}
+
+.preparation-time-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-accento);
+}
+
+.preparation-time-list {
+  list-style: none;
+  padding-left: 1.875rem;
+}
+
+.preparation-time-list-li {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-secundario);
+  margin: 1rem 0;
+  position: relative;
+}
+
+strong {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: var(--espacio-texto);
+  color: var(--color-secundario);
+}
+
+.preparation-time-list-li::before {
+  content: "•";
+  color: var(--color-accento);
+  font-weight: 700;
+  position: absolute;
+  left: -1.5625rem;
+  top: 0;
+}
+
+.ingredients-title,
+.instructions-title,
+.nutrition-title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--color-accento);
+  margin: 1rem;
+  font-family: "Young Serif";
+  padding: 0 1rem;
+}
+
+.ingredients-list {
+  list-style: none;
+  padding: 0 2rem;
+  padding-left: 2.5rem;
+}
+
+.ingredients-list-li,
+.instructions-list-li {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 1rem;
+  color: var(--color-secundario);
+  line-height: var(--espacio-texto);
+  padding: 0 1rem;
+  position: relative;
+}
+
+.ingredients-list-li::before {
+  content: "•";
+  color: var(--color-accento);
+  font-weight: 700;
+  position: absolute;
+  left: -1.0625rem;
+  top: 0;
+}
+
+.instructions-list {
+  padding: 0 2rem;
+  padding-left: 2.5rem;
+  list-style: none;
+  counter-reset: contador;
+}
+
+.instructions-list-li {
+  counter-increment: contador;
+}
+
+.instructions-list-li::marker {
+  content: counter(contador) ". ";
+  color: var(--color-accento);
+  font-weight: 700;
+}
+
+.nutrition-table {
+  margin: 1rem;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.nutrition-table tbody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-evenly;
+}
+
+.nutrition-table tbody tr {
+  border-bottom: medium solid var(--color-borde);
+}
+
+.nutrition-table tbody tr td {
+  display: inline-block;
+  text-align: start;
+  width: 18.75rem;
+  color: var(--color-secundario);
+}
+
+.nutrition-table tbody tr td:last-child {
+  color: var(--color-accento);
+  margin: 2rem;
+  font-weight: 700;
+}
+
+@media (min-width: 37.5rem) {
+  .card {
+    width: 56.25rem;
+    padding: 1.25rem;
+    background-color: var(--color-tarjeta);
+    border-radius: 0.625rem;
+  }
+
+  .recipe-img {
+    border-radius: 0.625rem;
+    object-fit: cover; /* Hecho a 'cover' para mejor visualización */
+    height: 30vh;
+  }
+}
